@@ -32,7 +32,7 @@ const HeroText = () => {
       >
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan to-green font-semibold">Frontend</span>{" "}
         <span className="text-white/60">&amp;</span>{" "}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-green to-cyan font-semibold">Full-Stack</span>{" "}
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-green to-cyan font-semibold">Web</span>{" "}
         Developer
       </motion.h2>
 

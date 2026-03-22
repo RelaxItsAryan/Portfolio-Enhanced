@@ -5,13 +5,13 @@ const NavbarLogo = () => {
       <div className="hidden md:block">
         <h1 className="text-2xl lg:text-3xl font-mono font-bold tracking-wider transition-all duration-300 group-hover:scale-105">
           <span className="text-green relative">
-            AR
+            Ar
             <span className="absolute -top-1 -right-1 text-xs text-cyan opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               01
             </span>
           </span>
           <span className="text-white group-hover:text-cyan transition-colors duration-300">
-            YAN
+            yan
           </span>
         </h1>
         {/* Underline effect */}
