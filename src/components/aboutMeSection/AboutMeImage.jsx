@@ -68,7 +68,7 @@ const AboutMeImage = () => {
           const positions = [
             { top: '20%', left: '-10%' },
             { top: '40%', right: '-10%' },
-            { bottom: '30%', left: '-8%' },
+            { bottom: '50%', left: '-8%' },
             { bottom: '15%', right: '-8%' }
           ];
           

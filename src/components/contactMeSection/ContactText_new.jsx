@@ -94,6 +94,7 @@ const ContactText = () => {
           </p>
         </motion.div>
       </div>
+      
 
       {/* Floating decorative elements */}
       <div className="absolute -top-4 -right-4 text-green/10 font-mono text-xs pointer-events-none">

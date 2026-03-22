@@ -70,38 +70,6 @@ const ContactMeRight = () => {
         <ContactInfo />
       </motion.div>
 
-      {/* Social Media Links */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.6 }}
-        className="w-full"
-      >
-        <div className="text-center mb-4">
-          <h3 className="text-lg font-semibold text-gray-300 mb-2">Connect With Me</h3>
-          <div className="w-16 h-0.5 bg-gradient-to-r from-green to-cyan mx-auto rounded-full"></div>
-        </div>
-        
-        <div className="flex justify-center gap-4">
-          {socialLinks.map((social, index) => (
-            <motion.a
-              key={index}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.1, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              className={`flex items-center justify-center w-12 h-12 bg-gray-800/50 backdrop-blur-sm border border-gray-600/50 rounded-xl text-gray-400 ${social.color} transition-all duration-300 hover:border-green/50 hover:shadow-lg hover:shadow-green/20 group`}
-              title={social.label}
-            >
-              <social.icon className="text-lg group-hover:scale-110 transition-transform duration-300" />
-              
-              {/* Hover effect overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-green/10 to-cyan/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </motion.a>
-          ))}
-        </div>
-      </motion.div>
 
       {/* Quick response badge */}
       <motion.div

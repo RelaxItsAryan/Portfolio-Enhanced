@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { FaCode, FaHandshake, FaRocket, FaLightbulb } from "react-icons/fa";
+import { FaCode, FaHandshake, FaRocket, FaLightbulb, FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
+
+const socialLinks = [
+  { href: "https://github.com", icon: FaGithub, label: "GitHub", color: "hover:text-green" },
+  { href: "https://linkedin.com", icon: FaLinkedin, label: "LinkedIn", color: "hover:text-cyan" },
+  { href: "https://instagram.com", icon: FaInstagram, label: "Instagram", color: "hover:text-pink-500" },
+  { href: "mailto:your.email@example.com", icon: FaEnvelope, label: "Email", color: "hover:text-amber-500" },
+];
 
 const ContactText = () => {
   return (
@@ -95,6 +102,39 @@ const ContactText = () => {
         </motion.div>
       </div>
 
+      {/* Social Media Links */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+        className="w-full mt-16 pt-0.01"
+      >
+        <div className="text-center mb-6">
+          <h3 className="text-3xl font-bold text-gray-300 mb-3">Connect With Me</h3>
+          <div className="w-20 h-1 bg-gradient-to-r from-green to-cyan mx-auto rounded-full"></div>
+        </div>
+        
+        <div className="flex justify-center gap-6">
+          {socialLinks.map((social, index) => (
+            <motion.a
+              key={index}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              className={`flex items-center justify-center w-14 h-14 bg-gray-800/50 backdrop-blur-sm border border-gray-600/50 rounded-xl text-gray-400 ${social.color} transition-all duration-300 hover:border-green/50 hover:shadow-lg hover:shadow-green/20 group`}
+              title={social.label}
+            >
+              <social.icon className="text-2xl group-hover:scale-110 transition-transform duration-300" />
+              
+              {/* Hover effect overlay */}
+              <div className="absolute inset-0 bg-gradient-to-r from-green/10 to-cyan/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </motion.a>
+          ))}
+        </div>
+      </motion.div>
+      
       {/* Floating decorative elements */}
       <div className="absolute -top-4 -right-4 text-green/10 font-mono text-xs pointer-events-none">
         &lt;/contact&gt;
